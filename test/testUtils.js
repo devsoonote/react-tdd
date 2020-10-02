@@ -1,5 +1,9 @@
 import checkPropTypes from 'check-prop-types';
+import { createStore } from 'redux';
 
+import rootReducer from '../src/reducers';
+
+export const storyFactory = (initialState) => createStore(rootReducer, initialState)
 
 /*
 * Return node(s) with the given data-test attribute.
