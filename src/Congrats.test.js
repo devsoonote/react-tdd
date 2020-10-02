@@ -13,7 +13,7 @@ import Congrats from "./Congrats";
 const setup = (props = {}) => shallow(<Congrats {...props} />);
 
 test('render without error', () => {
-  const wrapper = setup();
+  const wrapper = setup({ success: false });
   const component = findByTestAttr(wrapper, 'component-congrats')
   expect(component.length).toBe(1)
 })
